@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AddCategory } from './components/AddCategory';
 
 function GifExpertApp() {
   // mantener el estado de los elementos buscados
@@ -16,8 +17,8 @@ function GifExpertApp() {
       <h1>Gif Expert APP</h1>
 
       {/* Input / barra de busqueda */}
+      <AddCategory setCategories={setCategories} />
       {/* Output / resultados */}
-      <button onClick={onAddCategory}>Agregar</button>
       <ol>
         {categories.map((category) => {
           return <li key={category}>{category}</li>;
