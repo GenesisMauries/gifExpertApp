@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/GifGrid';
+import { AddCategory, GifGrid } from './components/index';
 function GifExpertApp() {
   // mantener el estado de los elementos buscados
   const [categories, setCategories] = useState([]);
