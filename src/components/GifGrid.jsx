@@ -12,8 +12,8 @@ export const GifGrid = ({ category }) => {
     <>
       <h3>{category}</h3>
       <article className='card-grid'>
-        {images.map(({ id, title, url }) => {
-          return <GifItem key={id} title={title} img={url} />;
+        {images.map((image) => {
+          return <GifItem key={image.id} {...image} />; // mandamos el objeto por expansion
         })}
       </article>
     </>
