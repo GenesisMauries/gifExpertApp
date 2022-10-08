@@ -8,7 +8,7 @@ export const AddCategory = ({ onNewCategory }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     if (inputValue.trim().length <= 1) return;
-    onNewCategory(inputValue.trim());
+    onNewCategory(inputValue.trim().toLocaleLowerCase());
     setInputValue('');
   };
   return (

@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
-
+import { GifGrid } from './components/GifGrid';
 function GifExpertApp() {
   // mantener el estado de los elementos buscados
   const [categories, setCategories] = useState([]);
   // console.log(categories);
   const onAddCategory = (value) => {
     console.log(value);
-    // Copia el estado y suma un nuevo elemento
-    setCategories([...categories, value]);
+    if (!categories.includes(value)) {
+      // Copia el estado y suma un nuevo elemento
+      setCategories([...categories, value]);
+    }
+
     //Usando callback de useState
     // setCategories((cat) => [...cat, 'Dua Lipa']);
   };
@@ -21,11 +24,10 @@ function GifExpertApp() {
       <AddCategory onNewCategory={(value) => onAddCategory(value)} />
 
       {/* Output / resultados */}
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+
+      {categories.map((category) => {
+        return <GifGrid key={category} category={category} />;
+      })}
     </>
   );
 }
