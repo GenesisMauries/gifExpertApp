@@ -9,9 +9,8 @@ function GifExpertApp() {
     console.log(value);
     if (!categories.includes(value)) {
       // Copia el estado y suma un nuevo elemento
-      setCategories([...categories, value]);
+      setCategories([value, ...categories]);
     }
-
     //Usando callback de useState
     // setCategories((cat) => [...cat, 'Dua Lipa']);
   };
