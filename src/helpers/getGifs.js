@@ -10,6 +10,6 @@ export const getGifs = async (category) => {
       url: img.images.downsized_medium.url,
     };
   });
-  console.log(gifs); // se ejecuta dos veces por el stric mode de index.js
+  //console.log(gifs); // se ejecuta dos veces por el stric mode de index.js
   return gifs; // retorna el nuevo arreglo de gifs
 };

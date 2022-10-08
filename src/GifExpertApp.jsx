@@ -6,7 +6,7 @@ function GifExpertApp() {
   const [categories, setCategories] = useState([]);
   // console.log(categories);
   const onAddCategory = (value) => {
-    console.log(value);
+    // console.log(value);
     if (!categories.includes(value)) {
       // Copia el estado y suma un nuevo elemento
       setCategories([value, ...categories]);
