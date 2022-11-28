@@ -11,9 +11,10 @@ export const GifGrid = ({ category }) => {
       {isLoading && <h3>Cargando...</h3>}
 
       <article className='card-grid'>
-        {images.map((image) => {
-          return <GifItem key={image.id} {...image} />; // mandamos el objeto por expansion
-        })}
+        {images.length > 0 &&
+          images.map((image) => {
+            return <GifItem key={image.id} {...image} />; // mandamos el objeto por expansion
+          })}
       </article>
     </>
   );
